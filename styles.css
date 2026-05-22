@@ -331,6 +331,18 @@ h3 {
   line-height: 1.1;
 }
 
+.opportunity-bridge {
+  border-top: 1px solid var(--line);
+  margin: 22px 0 16px;
+  padding-top: 18px;
+}
+
+.opportunity-bridge h3 {
+  font-size: clamp(1.45rem, 3vw, 2.4rem);
+  line-height: 1.08;
+  margin-bottom: 0;
+}
+
 .step-list {
   counter-reset: steps;
   list-style: none;
