@@ -6,7 +6,7 @@
     <title>Turn Your Expertise Into Paid AI Work in 30 Days | AI Pays You</title>
     <meta
       name="description"
-      content="Use your own professional expertise to qualify for paid AI training, evaluation, and review projects in 30 days."
+      content="Search your domain of expertise and see how experts like you can get paid to review AI work."
     >
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -14,180 +14,117 @@
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="AI Pays You home">AI Pays You</a>
       <nav class="top-nav" aria-label="Primary navigation">
-        <a href="#fit">Your fit</a>
-        <a href="#path">30 days</a>
-        <a href="#try">Try it</a>
+        <a href="#search">Search</a>
+        <a href="#learn">Learn more</a>
+        <a href="#begin">Begin</a>
       </nav>
     </header>
 
+    <aside class="floating-timer" aria-labelledby="floating-timer-title">
+      <p class="eyebrow" id="floating-timer-title">30-day runway</p>
+      <div class="mini-countdown" role="timer" aria-live="polite">
+        <strong id="days">30</strong>
+        <span>days</span>
+        <strong id="hours">00</strong>
+        <span>hrs</span>
+        <strong id="minutes">00</strong>
+        <span>min</span>
+      </div>
+    </aside>
+
     <main>
-      <section class="hero focus-hero" aria-labelledby="headline">
+      <section class="search-hero" id="search" aria-labelledby="headline">
         <div class="hero-copy">
-          <p class="kicker">No career switch. No generic side hustle.</p>
-          <h1 id="headline">Turn your domain expertise into paid AI work in 30 days.</h1>
+          <p class="kicker">For people already expert in something valuable</p>
+          <h1 id="headline">Search your domain of expertise.</h1>
           <p class="hero-subtitle">
-            AI projects need the judgment you already use at work. Choose your field and see how your expertise can apply directly.
+            See whether your current expertise can be used to review AI work and get paid within a focused 30-day path.
           </p>
-          <a class="button" href="#fit">Check my fit</a>
         </div>
 
-        <div class="countdown-panel" aria-labelledby="countdown-title">
-          <div>
-            <p class="eyebrow" id="countdown-title">Your 30-day runway</p>
-            <p class="countdown-note">Started when you first landed here.</p>
-          </div>
-          <div class="countdown-grid" role="timer" aria-live="polite">
-            <div>
-              <strong id="days">30</strong>
-              <span>Days</span>
-            </div>
-            <div>
-              <strong id="hours">00</strong>
-              <span>Hours</span>
-            </div>
-            <div>
-              <strong id="minutes">00</strong>
-              <span>Minutes</span>
-            </div>
-            <div>
-              <strong id="seconds">00</strong>
-              <span>Seconds</span>
-            </div>
-          </div>
+        <div class="search-panel">
+          <label class="domain-picker" for="domain">
+            <span>I am an expert in</span>
+            <select id="domain" name="domain">
+              <option value="consulting">Consulting - Business, Strategy, IT, and Transformation</option>
+              <option value="medicine">Medicine and Clinical Practice</option>
+              <option value="law">Law and Legal Review</option>
+              <option value="software">Software Engineering</option>
+              <option value="data">Data, MLOps, Cloud, and Cybersecurity</option>
+              <option value="finance">Finance, Investment, and Accounting</option>
+              <option value="science">Science, Engineering, and PhD Research</option>
+              <option value="language">Language, Translation, and Audio Evaluation</option>
+              <option value="operations">Business Operations and Supply Chain</option>
+              <option value="sales">Sales, Support, and Customer Experience</option>
+              <option value="design">Design, Media, and AI Content Review</option>
+              <option value="generalist">Generalist AI Evaluation</option>
+            </select>
+          </label>
         </div>
       </section>
 
-      <section class="fit-section" id="fit" aria-labelledby="fit-title">
-        <div class="fit-shell">
-          <div class="fit-copy">
-            <p class="eyebrow">Start with you</p>
-            <h2 id="fit-title">I am an expert in...</h2>
-            <label class="domain-picker" for="domain">
-              <span>Your professional expertise</span>
-              <select id="domain" name="domain">
-                <option value="consulting">Consulting - Business, Strategy, IT, and Transformation</option>
-                <option value="medicine">Medicine and Clinical Practice</option>
-                <option value="law">Law and Legal Review</option>
-                <option value="software">Software Engineering</option>
-                <option value="data">Data, MLOps, Cloud, and Cybersecurity</option>
-                <option value="finance">Finance, Investment, and Accounting</option>
-                <option value="science">Science, Engineering, and PhD Research</option>
-                <option value="language">Language, Translation, and Audio Evaluation</option>
-                <option value="operations">Business Operations and Supply Chain</option>
-                <option value="sales">Sales, Support, and Customer Experience</option>
-                <option value="design">Design, Media, and AI Content Review</option>
-                <option value="generalist">Generalist AI Evaluation</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="fit-result" aria-live="polite">
-            <p class="eyebrow">Your AI fit</p>
-            <h3 id="fit-headline">Consulting expertise maps directly to AI evaluation.</h3>
-            <p id="fit-description">
-              Use your business, strategy, IT, or transformation judgment to review AI outputs, evaluate scenarios,
-              test recommendations, and improve project workflows.
-            </p>
-            <div class="pay-band">
-              <span>Observed live project range</span>
+      <section class="result-section" aria-labelledby="result-title">
+        <div class="result-card" aria-live="polite">
+          <p class="eyebrow">Good news</p>
+          <h2 id="result-title">Your expertise is in demand.</h2>
+          <p id="fit-description">
+            Top AI labs and AI project teams need consulting experts to review AI outputs, evaluate scenarios,
+            test recommendations, and improve project workflows.
+          </p>
+          <div class="demand-row">
+            <div>
+              <span>Domain</span>
+              <strong id="fit-domain">Consulting - Business, Strategy, IT, and Transformation</strong>
+            </div>
+            <div>
+              <span>Observed project range</span>
               <strong id="fit-pay">$50-$200/hour</strong>
             </div>
           </div>
+          <a class="button ghost" href="#learn">Learn more</a>
         </div>
       </section>
 
-      <section class="reassurance-section" aria-labelledby="reassurance-title">
+      <section class="learn-section" id="learn" aria-labelledby="learn-title">
         <div class="section-heading">
-          <p class="eyebrow">The point</p>
-          <h2 id="reassurance-title">You are not starting over. You are applying what you already know.</h2>
-        </div>
-        <div class="reassurance-grid">
-          <article>
-            <h3>Your field stays the center</h3>
-            <p>You do not need to become a generic AI worker. The work is valuable because you already understand your domain.</p>
-          </article>
-          <article>
-            <h3>AI needs expert judgment</h3>
-            <p>Projects need people who can spot weak reasoning, missing context, inaccurate outputs, and unrealistic recommendations.</p>
-          </article>
-          <article>
-            <h3>You can test it safely</h3>
-            <p>Practice the interview first, then decide whether to apply for a real project through the 30-day path.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="path-section" id="path" aria-labelledby="path-title">
-        <div class="section-heading">
-          <p class="eyebrow">30-day path</p>
-          <h2 id="path-title">Give it a serious try without making a career transition.</h2>
+          <p class="eyebrow">How it works</p>
+          <h2 id="learn-title">How experts like you in <span id="domain-inline">consulting</span> get paid to review AI work.</h2>
         </div>
 
-        <ol class="simple-path">
+        <ol class="three-step-path">
           <li>
-            <span>1</span>
-            <h3>Pick your expertise</h3>
-            <p>Choose the field you already know best.</p>
+            <span>Step 1</span>
+            <h3>Signal that you are ready</h3>
+            <p id="step-one">
+              Signal that, as an expert in consulting, you are ready to review AI work.
+            </p>
           </li>
           <li>
-            <span>2</span>
-            <h3>Practice the interview</h3>
-            <p>Rehearse how to explain your judgment in an AI project context.</p>
+            <span>Step 2</span>
+            <h3>Set yourself up to apply</h3>
+            <p>
+              Prepare your profile and application path so you can apply for projects and get paid. Allow 30 days.
+            </p>
           </li>
           <li>
-            <span>3</span>
-            <h3>Create your profile</h3>
-            <p>Apply with your existing professional background, not a new identity.</p>
-          </li>
-          <li>
-            <span>4</span>
-            <h3>Try a real project</h3>
-            <p>If accepted, complete expert work and see whether it can pay in 30 days.</p>
+            <span>Step 3</span>
+            <h3>Do your best work</h3>
+            <p>
+              Complete expert review work carefully, deliver strong judgment, and receive payment when work is accepted.
+            </p>
           </li>
         </ol>
       </section>
 
-      <section class="try-section" id="try" aria-labelledby="try-title">
-        <div class="try-copy">
-          <p class="eyebrow">Give it a go</p>
-          <h2 id="try-title">See if your expertise can get paid by AI.</h2>
+      <section class="begin-section" id="begin" aria-labelledby="begin-title">
+        <div>
+          <p class="eyebrow">Begin step 1</p>
+          <h2 id="begin-title">Ready to see if your expertise can get paid by AI?</h2>
           <p>
-            Save your 30-day fit record locally, then use the profile link when you are ready to try the real application path.
+            This starts the application path. You can still use the 30-day runway to prepare, practice, and decide whether the opportunity fits you.
           </p>
-          <div class="try-actions">
-            <a class="button" href="https://t.mercor.com/iG6tP" target="_blank" rel="noopener">Create profile</a>
-            <a class="button ghost" href="https://github.com/CEOFOUNDER/AIPAYSYOU" target="_blank" rel="noopener">Practice first</a>
-          </div>
         </div>
-
-        <form class="lead-form" id="lead-form">
-          <label>
-            Full name
-            <input name="name" autocomplete="name" required placeholder="Jane Specialist">
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" autocomplete="email" required placeholder="jane@example.com">
-          </label>
-          <label>
-            Current step
-            <select name="step" required>
-              <option value="1">1 - Pick expertise</option>
-              <option value="2">2 - Practice interview</option>
-              <option value="3">3 - Create profile</option>
-              <option value="4">4 - Try real project</option>
-              <option value="5">5 - Joined project</option>
-              <option value="6">6 - Completed work</option>
-              <option value="7">7 - Got paid</option>
-            </select>
-          </label>
-          <label>
-            Notes
-            <textarea name="notes" rows="3" placeholder="Your field, status, next action"></textarea>
-          </label>
-          <button class="button submit" type="submit">Save my fit</button>
-          <p class="form-status" id="form-status" role="status"></p>
-        </form>
+        <a class="button begin-button" href="https://t.mercor.com/iG6tP" target="_blank" rel="noopener">Begin step 1</a>
       </section>
     </main>
 
