@@ -181,6 +181,35 @@ function updateFitPanel(value) {
   if (stepOne) stepOne.textContent = `Signal that, as an expert in ${profile.shortLabel}, you are ready to review AI work.`;
 }
 
+function setupStepFlow() {
+  const panels = Array.from(document.querySelectorAll("[data-flow-step]"));
+  const tabs = Array.from(document.querySelectorAll("[data-step-target]"));
+  const controls = Array.from(document.querySelectorAll("[data-step-next]"));
+  if (!panels.length) return;
+
+  function showStep(step) {
+    for (const panel of panels) {
+      const isActive = panel.dataset.flowStep === step;
+      panel.hidden = !isActive;
+      panel.classList.toggle("active", isActive);
+    }
+
+    for (const tab of tabs) {
+      const isActive = tab.dataset.stepTarget === step;
+      tab.classList.toggle("active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    }
+  }
+
+  for (const tab of tabs) {
+    tab.addEventListener("click", () => showStep(tab.dataset.stepTarget));
+  }
+
+  for (const control of controls) {
+    control.addEventListener("click", () => showStep(control.dataset.stepNext));
+  }
+}
+
 function handleLeadForm() {
   const form = document.getElementById("lead-form");
   if (!form) return;
@@ -301,6 +330,7 @@ function setupAdminActions() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 syncDomainSelect();
+setupStepFlow();
 handleLeadForm();
 renderAdmin();
 setupAdminActions();
