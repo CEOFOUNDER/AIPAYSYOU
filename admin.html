@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM | AI Pays You</title>
+    <meta name="description" content="Local CRM dashboard for the AI Pays You candidate funnel.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AI Pays You home">AI Pays You</a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="index.html#path">Path</a>
+        <a href="index.html#join">Join</a>
+        <a href="admin.html">CRM</a>
+      </nav>
+    </header>
+
+    <main class="admin-main">
+      <section class="section-heading">
+        <p class="eyebrow">Local CRM</p>
+        <h1>Candidate funnel dashboard</h1>
+        <p>
+          This dashboard reads candidate records saved in this browser. Export CSV for manual follow-up or
+          replace the storage adapter with a live backend when deploying.
+        </p>
+      </section>
+
+      <section class="metric-grid" aria-label="Candidate metrics">
+        <div class="metric">
+          <span>Total candidates</span>
+          <strong id="metric-total">0</strong>
+        </div>
+        <div class="metric">
+          <span>Interview practice</span>
+          <strong id="metric-practice">0</strong>
+        </div>
+        <div class="metric">
+          <span>Project interview</span>
+          <strong id="metric-interview">0</strong>
+        </div>
+        <div class="metric">
+          <span>Paid</span>
+          <strong id="metric-paid">0</strong>
+        </div>
+      </section>
+
+      <section class="crm-panel" aria-labelledby="crm-title">
+        <div class="crm-toolbar">
+          <div>
+            <p class="eyebrow">Pipeline</p>
+            <h2 id="crm-title">Candidate records</h2>
+          </div>
+          <div class="crm-actions">
+            <button class="button ghost" id="export-csv" type="button">Export CSV</button>
+            <button class="button danger" id="clear-crm" type="button">Clear local data</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Domain</th>
+                <th>Step</th>
+                <th>Joined</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="candidate-rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
