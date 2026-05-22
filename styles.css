@@ -340,6 +340,49 @@ h3 {
 .opportunity-bridge h3 {
   font-size: clamp(1.45rem, 3vw, 2.4rem);
   line-height: 1.08;
+  margin-bottom: 18px;
+}
+
+.step-preview {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.step-preview li {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  min-height: 178px;
+  padding: 16px;
+}
+
+.step-preview span {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.step-preview strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.step-preview p {
+  color: var(--muted);
+  font-size: 0.94rem;
   margin-bottom: 0;
 }
 
@@ -510,12 +553,26 @@ textarea {
   font-weight: 800;
   min-height: 44px;
   padding: 10px 12px;
+  text-align: left;
 }
 
 .step-tab.active {
   background: var(--ink);
   border-color: var(--ink);
   color: #fff;
+}
+
+.step-tab span {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.step-tab:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
 }
 
 .flow-step {
@@ -700,7 +757,8 @@ td {
   }
 
   .demand-row,
-  .three-step-path {
+  .three-step-path,
+  .step-preview {
     grid-template-columns: 1fr;
   }
 
