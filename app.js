@@ -196,8 +196,10 @@ function updateDemandButton() {
 function hideUnlockedSections() {
   const resultSection = document.getElementById("result-section");
   const flowSection = document.getElementById("action-flow");
+  const footer = document.getElementById("site-footer");
   if (resultSection) resultSection.hidden = true;
   if (flowSection) flowSection.hidden = true;
+  if (footer) footer.hidden = true;
 }
 
 function revealResult(shouldScroll = true) {
@@ -207,6 +209,7 @@ function revealResult(shouldScroll = true) {
 
   updateFitPanel(domainSelect.value);
   resultSection.hidden = false;
+  document.getElementById("site-footer")?.removeAttribute("hidden");
   document.getElementById("action-flow")?.setAttribute("hidden", "");
 
   if (shouldScroll) resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -229,8 +232,12 @@ function setupStepFlow() {
   const tabs = Array.from(document.querySelectorAll("[data-step-target]"));
   const controls = Array.from(document.querySelectorAll("[data-step-next]"));
   if (!panels.length) return;
+  let maxUnlockedStep = 1;
 
   function showStep(step) {
+    const stepNumber = Number(step);
+    if (stepNumber > maxUnlockedStep) return;
+
     for (const panel of panels) {
       const isActive = panel.dataset.flowStep === step;
       panel.hidden = !isActive;
@@ -241,6 +248,7 @@ function setupStepFlow() {
       const isActive = tab.dataset.stepTarget === step;
       tab.classList.toggle("active", isActive);
       tab.setAttribute("aria-selected", String(isActive));
+      tab.disabled = Number(tab.dataset.stepTarget) > maxUnlockedStep;
     }
   }
 
@@ -249,8 +257,13 @@ function setupStepFlow() {
   }
 
   for (const control of controls) {
-    control.addEventListener("click", () => showStep(control.dataset.stepNext));
+    control.addEventListener("click", () => {
+      maxUnlockedStep = Math.max(maxUnlockedStep, Number(control.dataset.stepNext));
+      showStep(control.dataset.stepNext);
+    });
   }
+
+  showStep("1");
 }
 
 function handleLeadForm() {
