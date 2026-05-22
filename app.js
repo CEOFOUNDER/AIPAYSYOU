@@ -153,11 +153,7 @@ function syncDomainSelect() {
   const domainSelect = document.getElementById("domain");
   if (!domainSelect) return;
 
-  const saved = localStorage.getItem(STORAGE_KEYS.selectedDomain);
-  if (saved && EXPERTISE_PROFILES[saved]) domainSelect.value = saved;
-
   updateDemandButton();
-  if (domainSelect.value) revealResult(false);
 
   domainSelect.addEventListener("change", () => {
     if (domainSelect.value) {
