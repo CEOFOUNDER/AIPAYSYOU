@@ -156,11 +156,17 @@ function syncDomainSelect() {
   const saved = localStorage.getItem(STORAGE_KEYS.selectedDomain);
   if (saved && EXPERTISE_PROFILES[saved]) domainSelect.value = saved;
 
-  updateFitPanel(domainSelect.value);
+  updateDemandButton();
+  if (domainSelect.value) revealResult(false);
 
   domainSelect.addEventListener("change", () => {
-    localStorage.setItem(STORAGE_KEYS.selectedDomain, domainSelect.value);
-    updateFitPanel(domainSelect.value);
+    if (domainSelect.value) {
+      localStorage.setItem(STORAGE_KEYS.selectedDomain, domainSelect.value);
+    } else {
+      localStorage.removeItem(STORAGE_KEYS.selectedDomain);
+      hideUnlockedSections();
+    }
+    updateDemandButton();
   });
 }
 
@@ -172,13 +178,54 @@ function updateFitPanel(value) {
   const domain = document.getElementById("fit-domain");
   const inline = document.getElementById("domain-inline");
   const stepOne = document.getElementById("step-one");
+  const exactDomain = profile.label;
 
-  if (headline) headline.textContent = `Your expertise in ${profile.shortLabel} is in demand.`;
-  if (description) description.textContent = profile.description;
+  if (headline) headline.textContent = `${exactDomain} expertise is in demand.`;
+  if (description) {
+    description.textContent = `Top AI labs and AI project teams need experts in ${exactDomain} to review AI outputs, evaluate scenarios, test recommendations, and improve project workflows.`;
+  }
   if (pay) pay.textContent = profile.pay;
-  if (domain) domain.textContent = profile.label;
-  if (inline) inline.textContent = profile.shortLabel;
-  if (stepOne) stepOne.textContent = `Signal that, as an expert in ${profile.shortLabel}, you are ready to review AI work.`;
+  if (domain) domain.textContent = exactDomain;
+  if (inline) inline.textContent = exactDomain;
+  if (stepOne) stepOne.textContent = `Signal that, as an expert in ${exactDomain}, you are ready to review AI work.`;
+}
+
+function updateDemandButton() {
+  const domainSelect = document.getElementById("domain");
+  const checkButton = document.getElementById("check-demand");
+  if (!domainSelect || !checkButton) return;
+  checkButton.disabled = !domainSelect.value;
+}
+
+function hideUnlockedSections() {
+  const resultSection = document.getElementById("result-section");
+  const flowSection = document.getElementById("action-flow");
+  if (resultSection) resultSection.hidden = true;
+  if (flowSection) flowSection.hidden = true;
+}
+
+function revealResult(shouldScroll = true) {
+  const domainSelect = document.getElementById("domain");
+  const resultSection = document.getElementById("result-section");
+  if (!domainSelect?.value || !resultSection) return;
+
+  updateFitPanel(domainSelect.value);
+  resultSection.hidden = false;
+  document.getElementById("action-flow")?.setAttribute("hidden", "");
+
+  if (shouldScroll) resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function revealFlow() {
+  const flowSection = document.getElementById("action-flow");
+  if (!flowSection) return;
+  flowSection.hidden = false;
+  flowSection.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function setupUnlocks() {
+  document.getElementById("check-demand")?.addEventListener("click", () => revealResult());
+  document.getElementById("unlock-flow")?.addEventListener("click", revealFlow);
 }
 
 function setupStepFlow() {
@@ -330,6 +377,7 @@ function setupAdminActions() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 syncDomainSelect();
+setupUnlocks();
 setupStepFlow();
 handleLeadForm();
 renderAdmin();
