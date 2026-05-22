@@ -8,15 +8,15 @@
       name="description"
       content="Search your domain of expertise and see how experts like you can get paid to review AI work."
     >
-    <link rel="stylesheet" href="styles.css?v=20260522a">
+    <link rel="stylesheet" href="styles.css?v=20260522b">
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="AI Pays You home">AI Pays You</a>
       <nav class="top-nav" aria-label="Primary navigation">
         <a href="#search">Search</a>
-        <a href="#learn">Learn more</a>
-        <a href="#begin">Begin</a>
+        <a href="#action-flow">Steps</a>
+        <a href="#action-flow">Begin</a>
       </nav>
     </header>
 
@@ -81,50 +81,59 @@
               <strong id="fit-pay">$61-$122/hour</strong>
             </div>
           </div>
-          <a class="button ghost" href="#learn">Learn more</a>
+          <a class="button ghost" href="#action-flow">Show me step 1</a>
         </div>
       </section>
 
-      <section class="learn-section" id="learn" aria-labelledby="learn-title">
+      <section class="action-flow" id="action-flow" aria-labelledby="flow-title">
         <div class="section-heading">
-          <p class="eyebrow">How it works</p>
-          <h2 id="learn-title">How experts like you in <span id="domain-inline">consulting</span> get paid to review AI work.</h2>
+          <p class="eyebrow">One step at a time</p>
+          <h2 id="flow-title">How experts like you in <span id="domain-inline">consulting</span> get paid to review AI work.</h2>
         </div>
 
-        <ol class="three-step-path">
-          <li>
-            <span>Step 1</span>
-            <h3>Signal that you are ready</h3>
+        <div class="flow-card">
+          <div class="step-tabs" role="tablist" aria-label="Application steps">
+            <button class="step-tab active" type="button" data-step-target="1" role="tab" aria-selected="true">Step 1</button>
+            <button class="step-tab" type="button" data-step-target="2" role="tab" aria-selected="false">Step 2</button>
+            <button class="step-tab" type="button" data-step-target="3" role="tab" aria-selected="false">Step 3</button>
+          </div>
+
+          <article class="flow-step active" data-flow-step="1" aria-labelledby="step-1-title">
+            <p class="eyebrow">Begin step 1</p>
+            <h3 id="step-1-title">Signal that you are ready</h3>
             <p id="step-one">
               Signal that, as an expert in consulting, you are ready to review AI work.
             </p>
-          </li>
-          <li>
-            <span>Step 2</span>
-            <h3>Set yourself up to apply</h3>
+            <div class="flow-actions">
+              <a class="button begin-button" href="https://t.mercor.com/iG6tP" target="_blank" rel="noopener">Begin step 1</a>
+              <button class="button ghost" type="button" data-step-next="2">Then show step 2</button>
+            </div>
+          </article>
+
+          <article class="flow-step" data-flow-step="2" aria-labelledby="step-2-title" hidden>
+            <p class="eyebrow">Step 2</p>
+            <h3 id="step-2-title">Set yourself up to apply</h3>
             <p>
               Prepare your profile and application path so you can apply for projects and get paid. Allow 30 days.
             </p>
-          </li>
-          <li>
-            <span>Step 3</span>
-            <h3>Do your best work</h3>
+            <div class="flow-actions">
+              <button class="button ghost" type="button" data-step-next="1">Back to step 1</button>
+              <button class="button" type="button" data-step-next="3">Show step 3</button>
+            </div>
+          </article>
+
+          <article class="flow-step" data-flow-step="3" aria-labelledby="step-3-title" hidden>
+            <p class="eyebrow">Step 3</p>
+            <h3 id="step-3-title">Do your best work and receive payment</h3>
             <p>
               Complete expert review work carefully, deliver strong judgment, and receive payment when work is accepted.
             </p>
-          </li>
-        </ol>
-      </section>
-
-      <section class="begin-section" id="begin" aria-labelledby="begin-title">
-        <div>
-          <p class="eyebrow">Begin step 1</p>
-          <h2 id="begin-title">Begin Step 1: Signal that you are ready</h2>
-          <p>
-            This starts the application path. You can still use the 30-day runway to prepare, practice, and decide whether the opportunity fits you.
-          </p>
+            <div class="flow-actions">
+              <button class="button ghost" type="button" data-step-next="2">Back to step 2</button>
+              <a class="button begin-button" href="https://t.mercor.com/iG6tP" target="_blank" rel="noopener">Begin step 1</a>
+            </div>
+          </article>
         </div>
-        <a class="button begin-button" href="https://t.mercor.com/iG6tP" target="_blank" rel="noopener">Begin step 1</a>
       </section>
     </main>
 
@@ -133,6 +142,6 @@
       <span>Use what you already know.</span>
     </footer>
 
-    <script src="app.js?v=20260522a"></script>
+    <script src="app.js?v=20260522b"></script>
   </body>
 </html>
