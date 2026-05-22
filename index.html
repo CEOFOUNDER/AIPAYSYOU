@@ -8,7 +8,7 @@
       name="description"
       content="Search your domain of expertise and see how experts like you can get paid to review AI work."
     >
-    <link rel="stylesheet" href="styles.css?v=20260522e">
+    <link rel="stylesheet" href="styles.css?v=20260522f">
   </head>
   <body>
     <header class="site-header">
@@ -83,6 +83,23 @@
           </div>
           <div class="opportunity-bridge">
             <h3>Secure this opportunity in 3 easy steps</h3>
+            <ol class="step-preview" aria-label="3 easy steps">
+              <li>
+                <span>1</span>
+                <strong>Signal that you are ready</strong>
+                <p>Confirm that your selected expertise can be used for AI review work.</p>
+              </li>
+              <li>
+                <span>2</span>
+                <strong>Set yourself up to apply</strong>
+                <p>Prepare your profile and application path. Allow 30 days.</p>
+              </li>
+              <li>
+                <span>3</span>
+                <strong>Do your best work</strong>
+                <p>Complete accepted expert review work and receive payment.</p>
+              </li>
+            </ol>
           </div>
           <button class="button ghost" type="button" id="unlock-flow">Show me step 1</button>
         </div>
@@ -96,9 +113,18 @@
 
         <div class="flow-card">
           <div class="step-tabs" role="tablist" aria-label="Application steps">
-            <button class="step-tab active" type="button" data-step-target="1" role="tab" aria-selected="true">Step 1</button>
-            <button class="step-tab" type="button" data-step-target="2" role="tab" aria-selected="false">Step 2</button>
-            <button class="step-tab" type="button" data-step-target="3" role="tab" aria-selected="false">Step 3</button>
+            <button class="step-tab active" type="button" data-step-target="1" role="tab" aria-selected="true">
+              <span>Step 1</span>
+              Signal ready
+            </button>
+            <button class="step-tab" type="button" data-step-target="2" role="tab" aria-selected="false" disabled>
+              <span>Step 2</span>
+              Set up to apply
+            </button>
+            <button class="step-tab" type="button" data-step-target="3" role="tab" aria-selected="false" disabled>
+              <span>Step 3</span>
+              Do best work
+            </button>
           </div>
 
           <article class="flow-step active" data-flow-step="1" aria-labelledby="step-1-title">
@@ -140,11 +166,11 @@
       </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer locked-section" id="site-footer" hidden>
       <span>AI Pays You</span>
       <span>Use what you already know.</span>
     </footer>
 
-    <script src="app.js?v=20260522e"></script>
+    <script src="app.js?v=20260522f"></script>
   </body>
 </html>
