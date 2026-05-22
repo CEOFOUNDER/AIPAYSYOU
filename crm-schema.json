@@ -1,0 +1,22 @@
+{
+  "candidate": {
+    "id": "string",
+    "name": "string",
+    "email": "string",
+    "domain": "string",
+    "step": "number",
+    "joinedAt": "ISO-8601 datetime",
+    "countdownStartedAt": "ISO-8601 datetime",
+    "notes": "string",
+    "source": "string"
+  },
+  "steps": {
+    "1": "Choose domain",
+    "2": "Create profile",
+    "3": "Practice interview",
+    "4": "Sit project interview",
+    "5": "Join project",
+    "6": "Create best work",
+    "7": "Get paid"
+  }
+}
