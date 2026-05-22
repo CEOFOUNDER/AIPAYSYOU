@@ -20,84 +20,84 @@ const EXPERTISE_PROFILES = {
     shortLabel: "consulting",
     description:
       "Top AI labs and AI project teams need consulting experts to review AI outputs, evaluate scenarios, test recommendations, and improve project workflows.",
-    pay: "$50-$200/hour",
+    pay: "$61-$122/hour",
   },
   medicine: {
     label: "Medicine and Clinical Practice",
     shortLabel: "medicine",
     description:
       "Top AI labs and AI project teams need medical experts to review clinical scenarios, evaluate model answers, and spot missing context in healthcare workflows.",
-    pay: "$100-$180/hour",
+    pay: "$144-$288+/hour",
   },
   law: {
     label: "Law and Legal Review",
     shortLabel: "law",
     description:
       "Top AI labs and AI project teams need legal experts to review transactions, litigation, compliance, employment, IP, and document-heavy AI work.",
-    pay: "$85-$150/hour",
+    pay: "$91-$182/hour",
   },
   software: {
     label: "Software Engineering",
     shortLabel: "software engineering",
     description:
       "Top AI labs and AI project teams need software experts to review code, architecture, performance, reliability, and technical reasoning.",
-    pay: "$50-$170/hour",
+    pay: "$80-$160/hour",
   },
   data: {
     label: "Data, MLOps, Cloud, and Cybersecurity",
     shortLabel: "data, MLOps, cloud, and cybersecurity",
     description:
       "Top AI labs and AI project teams need technical infrastructure experts to test AI outputs against real data, cloud, MLOps, network, and security constraints.",
-    pay: "$45-$160/hour",
+    pay: "$75-$150/hour",
   },
   finance: {
     label: "Finance, Investment, and Accounting",
     shortLabel: "finance",
     description:
       "Top AI labs and AI project teams need finance experts to review investment, banking, equity research, accounting, risk, and trading analysis.",
-    pay: "$80-$200/hour",
+    pay: "$61-$122/hour",
   },
   science: {
     label: "Science, Engineering, and PhD Research",
     shortLabel: "science, engineering, and PhD research",
     description:
       "Top AI labs and AI project teams need research experts to evaluate complex scientific, engineering, PhD, physics, architecture, and geospatial answers.",
-    pay: "$60-$140/hour",
+    pay: "$100-$200/hour",
   },
   language: {
     label: "Language, Translation, and Audio Evaluation",
     shortLabel: "language and audio evaluation",
     description:
       "Top AI labs and AI project teams need language experts to evaluate bilingual, translation, audio, transcription, and culturally sensitive AI work.",
-    pay: "$25-$60/hour",
+    pay: "$36-$72/hour",
   },
   operations: {
     label: "Business Operations and Supply Chain",
     shortLabel: "business operations and supply chain",
     description:
       "Top AI labs and AI project teams need operations experts to test whether AI recommendations work in real process, supply chain, admin, and operating-model contexts.",
-    pay: "$34-$110/hour",
+    pay: "$61-$122/hour",
   },
   sales: {
     label: "Sales, Support, and Customer Experience",
     shortLabel: "sales, support, and customer experience",
     description:
       "Top AI labs and AI project teams need customer-facing experts to evaluate how AI handles real sales, support, customer experience, and commerce situations.",
-    pay: "$43-$150/hour",
+    pay: "$73-$146/hour",
   },
   design: {
     label: "Design, Media, and AI Content Review",
     shortLabel: "design, media, and AI content review",
     description:
       "Top AI labs and AI project teams need creative experts to review product design, UX, slide design, image, voice, animation, and AI-generated content.",
-    pay: "$50-$125/hour",
+    pay: "$37-$74/hour",
   },
   generalist: {
     label: "Generalist AI Evaluation",
     shortLabel: "generalist evaluation",
     description:
       "Top AI labs and AI project teams need careful generalist reviewers to test whether AI outputs make sense in real-world situations.",
-    pay: "$50-$200/hour",
+    pay: "$30-$60/hour",
   },
 };
 
