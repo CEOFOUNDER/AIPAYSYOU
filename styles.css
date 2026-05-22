@@ -274,6 +274,22 @@ h3 {
   width: 100%;
 }
 
+.search-button {
+  margin-top: 14px;
+  width: 100%;
+}
+
+.button:disabled {
+  background: #d2dbe6;
+  border-color: #d2dbe6;
+  color: #718094;
+  cursor: not-allowed;
+}
+
+.locked-section[hidden] {
+  display: none;
+}
+
 .result-card {
   background: #fafffd;
   border-color: rgba(15, 118, 110, 0.34);
