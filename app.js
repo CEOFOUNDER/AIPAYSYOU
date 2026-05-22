@@ -17,86 +17,86 @@ const FUNNEL_STEPS = {
 const EXPERTISE_PROFILES = {
   consulting: {
     label: "Consulting - Business, Strategy, IT, and Transformation",
-    headline: "Consulting expertise maps directly to AI evaluation.",
+    shortLabel: "consulting",
     description:
-      "Use your business, strategy, IT, or transformation judgment to review AI outputs, evaluate scenarios, test recommendations, and improve project workflows.",
+      "Top AI labs and AI project teams need consulting experts to review AI outputs, evaluate scenarios, test recommendations, and improve project workflows.",
     pay: "$50-$200/hour",
   },
   medicine: {
     label: "Medicine and Clinical Practice",
-    headline: "Clinical expertise can train AI to reason more safely.",
+    shortLabel: "medicine",
     description:
-      "Use medical judgment to review clinical scenarios, evaluate model answers, and spot missing context in healthcare workflows.",
+      "Top AI labs and AI project teams need medical experts to review clinical scenarios, evaluate model answers, and spot missing context in healthcare workflows.",
     pay: "$100-$180/hour",
   },
   law: {
     label: "Law and Legal Review",
-    headline: "Legal expertise can improve AI reasoning and review.",
+    shortLabel: "law",
     description:
-      "Use legal judgment across transactions, litigation, compliance, employment, IP, and document review tasks.",
+      "Top AI labs and AI project teams need legal experts to review transactions, litigation, compliance, employment, IP, and document-heavy AI work.",
     pay: "$85-$150/hour",
   },
   software: {
     label: "Software Engineering",
-    headline: "Software expertise can evaluate AI-generated code and systems.",
+    shortLabel: "software engineering",
     description:
-      "Use engineering judgment to review code, architecture, performance, reliability, and technical reasoning.",
+      "Top AI labs and AI project teams need software experts to review code, architecture, performance, reliability, and technical reasoning.",
     pay: "$50-$170/hour",
   },
   data: {
     label: "Data, MLOps, Cloud, and Cybersecurity",
-    headline: "Technical infrastructure expertise is useful immediately.",
+    shortLabel: "data, MLOps, cloud, and cybersecurity",
     description:
-      "Use data, MLOps, cloud, network, or security judgment to test AI outputs against real technical constraints.",
+      "Top AI labs and AI project teams need technical infrastructure experts to test AI outputs against real data, cloud, MLOps, network, and security constraints.",
     pay: "$45-$160/hour",
   },
   finance: {
     label: "Finance, Investment, and Accounting",
-    headline: "Finance expertise can evaluate AI on real commercial judgment.",
+    shortLabel: "finance",
     description:
-      "Use investment, banking, equity research, accounting, risk, or trading knowledge to review AI analysis and recommendations.",
+      "Top AI labs and AI project teams need finance experts to review investment, banking, equity research, accounting, risk, and trading analysis.",
     pay: "$80-$200/hour",
   },
   science: {
     label: "Science, Engineering, and PhD Research",
-    headline: "Research expertise can train AI on specialist reasoning.",
+    shortLabel: "science, engineering, and PhD research",
     description:
-      "Use scientific, engineering, PhD, physics, architecture, or geospatial knowledge to evaluate complex AI answers.",
+      "Top AI labs and AI project teams need research experts to evaluate complex scientific, engineering, PhD, physics, architecture, and geospatial answers.",
     pay: "$60-$140/hour",
   },
   language: {
     label: "Language, Translation, and Audio Evaluation",
-    headline: "Language expertise can improve AI across real-world communication.",
+    shortLabel: "language and audio evaluation",
     description:
-      "Use bilingual, translation, audio, transcription, and cultural judgment to evaluate language-heavy AI work.",
+      "Top AI labs and AI project teams need language experts to evaluate bilingual, translation, audio, transcription, and culturally sensitive AI work.",
     pay: "$25-$60/hour",
   },
   operations: {
     label: "Business Operations and Supply Chain",
-    headline: "Operations expertise can make AI outputs more realistic.",
+    shortLabel: "business operations and supply chain",
     description:
-      "Use process, supply chain, admin, and operating-model judgment to test whether AI recommendations work in practice.",
+      "Top AI labs and AI project teams need operations experts to test whether AI recommendations work in real process, supply chain, admin, and operating-model contexts.",
     pay: "$34-$110/hour",
   },
   sales: {
     label: "Sales, Support, and Customer Experience",
-    headline: "Customer-facing expertise can train AI for practical conversations.",
+    shortLabel: "sales, support, and customer experience",
     description:
-      "Use sales, support, customer experience, and commerce judgment to evaluate how AI handles real customer situations.",
+      "Top AI labs and AI project teams need customer-facing experts to evaluate how AI handles real sales, support, customer experience, and commerce situations.",
     pay: "$43-$150/hour",
   },
   design: {
     label: "Design, Media, and AI Content Review",
-    headline: "Creative expertise can evaluate AI outputs people actually see.",
+    shortLabel: "design, media, and AI content review",
     description:
-      "Use product design, UX, slide design, image, voice, animation, or content-review judgment to improve AI-generated work.",
+      "Top AI labs and AI project teams need creative experts to review product design, UX, slide design, image, voice, animation, and AI-generated content.",
     pay: "$50-$125/hour",
   },
   generalist: {
     label: "Generalist AI Evaluation",
-    headline: "Generalist judgment can still be valuable in AI evaluation.",
+    shortLabel: "generalist evaluation",
     description:
-      "Use broad reasoning, real-world understanding, and careful review skills to test whether AI outputs make sense.",
+      "Top AI labs and AI project teams need careful generalist reviewers to test whether AI outputs make sense in real-world situations.",
     pay: "$50-$200/hour",
   },
 };
@@ -128,9 +128,13 @@ function updateCountdown() {
   const seconds = Math.floor((remaining / 1000) % 60);
 
   daysEl.textContent = String(days);
-  document.getElementById("hours").textContent = pad(hours);
-  document.getElementById("minutes").textContent = pad(minutes);
-  document.getElementById("seconds").textContent = pad(seconds);
+  const hoursEl = document.getElementById("hours");
+  const minutesEl = document.getElementById("minutes");
+  const secondsEl = document.getElementById("seconds");
+
+  if (hoursEl) hoursEl.textContent = pad(hours);
+  if (minutesEl) minutesEl.textContent = pad(minutes);
+  if (secondsEl) secondsEl.textContent = pad(seconds);
 }
 
 function readCandidates() {
@@ -165,10 +169,16 @@ function updateFitPanel(value) {
   const headline = document.getElementById("fit-headline");
   const description = document.getElementById("fit-description");
   const pay = document.getElementById("fit-pay");
+  const domain = document.getElementById("fit-domain");
+  const inline = document.getElementById("domain-inline");
+  const stepOne = document.getElementById("step-one");
 
-  if (headline) headline.textContent = profile.headline;
+  if (headline) headline.textContent = `Your expertise in ${profile.shortLabel} is in demand.`;
   if (description) description.textContent = profile.description;
   if (pay) pay.textContent = profile.pay;
+  if (domain) domain.textContent = profile.label;
+  if (inline) inline.textContent = profile.shortLabel;
+  if (stepOne) stepOne.textContent = `Signal that, as an expert in ${profile.shortLabel}, you are ready to review AI work.`;
 }
 
 function handleLeadForm() {
@@ -206,7 +216,7 @@ function handleLeadForm() {
     form.reset();
 
     const status = document.getElementById("form-status");
-    if (status) status.textContent = "Saved. Your 30-day fit record is ready to review.";
+    if (status) status.textContent = "Candidate saved. Open CRM to review the funnel.";
   });
 }
 
@@ -218,7 +228,7 @@ function renderAdmin() {
   const byStep = (step) => candidates.filter((candidate) => Number(candidate.step) >= step).length;
 
   document.getElementById("metric-total").textContent = String(candidates.length);
-  document.getElementById("metric-practice").textContent = String(byStep(2));
+  document.getElementById("metric-practice").textContent = String(byStep(3));
   document.getElementById("metric-interview").textContent = String(byStep(4));
   document.getElementById("metric-paid").textContent = String(byStep(7));
 
