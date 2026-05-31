@@ -316,7 +316,7 @@ h3 {
 }
 
 .result-card p,
-.begin-section p {
+begin-section p {
   color: var(--muted);
   font-size: 1rem;
   max-width: 760px;
@@ -640,15 +640,22 @@ textarea {
 
 .site-footer {
   border-top: 1px solid var(--line);
+  flex-wrap: wrap;
   margin-top: 38px;
   padding: 24px 0 34px;
   color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 .site-footer a {
   color: var(--accent);
   font-weight: 800;
   text-decoration: none;
+}
+
+.legal-line {
+  max-width: 760px;
 }
 
 .begin-section {
