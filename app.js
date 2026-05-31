@@ -92,12 +92,19 @@ const EXPERTISE_PROFILES = {
       "Top AI labs and AI project teams need creative experts to review product design, UX, slide design, image, voice, animation, and AI-generated content.",
     pay: "$37-$74/hour",
   },
+  "ai-generalist": {
+    label: "Generalist with some AI knowledge",
+    shortLabel: "generalist with AI knowledge",
+    description:
+      "Top AI labs and AI project teams need AI-aware generalists to review everyday AI outputs, compare responses, check reasoning, and spot when answers are useful, clear, or wrong.",
+    pay: "$60-$120/hour",
+  },
   generalist: {
     label: "Generalist AI Evaluation",
     shortLabel: "generalist evaluation",
     description:
       "Top AI labs and AI project teams need careful generalist reviewers to test whether AI outputs make sense in real-world situations.",
-    pay: "$30-$60/hour",
+    pay: "$60-$120/hour",
   },
 };
 
@@ -177,9 +184,7 @@ function updateFitPanel(value) {
   const exactDomain = profile.label;
 
   if (headline) headline.textContent = `${exactDomain} expertise is in demand.`;
-  if (description) {
-    description.textContent = `Top AI labs and AI project teams need experts in ${exactDomain} to review AI outputs, evaluate scenarios, test recommendations, and improve project workflows.`;
-  }
+  if (description) description.textContent = profile.description;
   if (pay) pay.textContent = profile.pay;
   if (domain) domain.textContent = exactDomain;
   if (inline) inline.textContent = exactDomain;
@@ -212,14 +217,14 @@ function revealResult(shouldScroll = true) {
   document.getElementById("site-footer")?.removeAttribute("hidden");
   document.getElementById("action-flow")?.setAttribute("hidden", "");
 
-  if (shouldScroll) resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (shouldScroll) resultSection.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 function revealFlow() {
   const flowSection = document.getElementById("action-flow");
   if (!flowSection) return;
   flowSection.hidden = false;
-  flowSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  flowSection.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 function setupUnlocks() {
