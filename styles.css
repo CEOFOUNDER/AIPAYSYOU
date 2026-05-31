@@ -316,7 +316,7 @@ h3 {
 }
 
 .result-card p,
-begin-section p {
+.begin-section p {
   color: var(--muted);
   font-size: 1rem;
   max-width: 760px;
