@@ -233,12 +233,19 @@ h3 {
 .admin-main {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 46px 0;
+  padding: 24px 0;
+}
+
+.result-section,
+.action-flow {
+  min-height: min(720px, calc(100svh - 76px));
+  display: grid;
+  align-items: center;
 }
 
 .section-heading {
   max-width: 760px;
-  margin-bottom: 26px;
+  margin-bottom: 14px;
 }
 
 .section-heading p,
@@ -303,15 +310,15 @@ h3 {
 }
 
 .result-card h2 {
-  font-size: clamp(2.4rem, 7vw, 5.6rem);
-  line-height: 1.08;
+  font-size: clamp(2rem, 4.8vw, 4.1rem);
+  line-height: 1.02;
   max-width: 780px;
 }
 
 .result-card p,
 .begin-section p {
   color: var(--muted);
-  font-size: 1.08rem;
+  font-size: 1rem;
   max-width: 760px;
 }
 
@@ -320,9 +327,9 @@ h3 {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 0.55fr);
   gap: 18px;
-  margin-top: 22px;
-  margin-bottom: 22px;
-  padding-top: 18px;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding-top: 14px;
 }
 
 .demand-row span {
@@ -339,14 +346,14 @@ h3 {
 
 .opportunity-bridge {
   border-top: 1px solid var(--line);
-  margin: 22px 0 16px;
-  padding-top: 18px;
+  margin: 14px 0 14px;
+  padding-top: 14px;
 }
 
 .opportunity-bridge h3 {
-  font-size: clamp(1.45rem, 3vw, 2.4rem);
+  font-size: clamp(1.25rem, 2.4vw, 2rem);
   line-height: 1.08;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .step-preview {
@@ -362,13 +369,13 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
-  min-height: 178px;
-  padding: 16px;
+  min-height: 138px;
+  padding: 13px;
 }
 
 .step-preview span {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background: var(--ink);
   color: #fff;
@@ -376,7 +383,7 @@ h3 {
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .step-preview strong {
@@ -388,7 +395,8 @@ h3 {
 
 .step-preview p {
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.88rem;
+  line-height: 1.35;
   margin-bottom: 0;
 }
 
@@ -539,8 +547,8 @@ textarea {
 .flow-card {
   box-shadow: var(--shadow);
   display: grid;
-  gap: 22px;
-  min-height: 420px;
+  gap: 14px;
+  min-height: 0;
 }
 
 .step-tabs {
@@ -584,7 +592,7 @@ textarea {
 .flow-step {
   align-content: center;
   display: grid;
-  min-height: 300px;
+  min-height: 240px;
 }
 
 .flow-step[hidden] {
@@ -592,14 +600,14 @@ textarea {
 }
 
 .flow-step h3 {
-  font-size: clamp(2rem, 5vw, 4.4rem);
+  font-size: clamp(1.9rem, 4.2vw, 3.6rem);
   line-height: 1.02;
   max-width: 760px;
 }
 
 .flow-step p {
   color: var(--muted);
-  font-size: 1.12rem;
+  font-size: 1.02rem;
   max-width: 680px;
 }
 
@@ -754,6 +762,11 @@ td {
     padding-top: 26px;
   }
 
+  .result-section,
+  .action-flow {
+    min-height: auto;
+  }
+
   .search-panel {
     max-width: 720px;
   }
@@ -766,6 +779,24 @@ td {
   .three-step-path,
   .step-preview {
     grid-template-columns: 1fr;
+  }
+
+  .step-preview {
+    gap: 8px;
+  }
+
+  .step-preview li {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 32px minmax(0, 0.8fr) minmax(0, 1.2fr);
+    min-height: 0;
+    padding: 10px 12px;
+  }
+
+  .step-preview span,
+  .step-preview strong,
+  .step-preview p {
+    margin-bottom: 0;
   }
 
   .metric-grid {
@@ -810,7 +841,51 @@ td {
   }
 
   h1 {
-    font-size: clamp(2.6rem, 15vw, 4.2rem);
+    font-size: clamp(2.45rem, 13vw, 3.7rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .result-section,
+  .action-flow {
+    padding: 14px 0;
+  }
+
+  .result-card,
+  .flow-card,
+  .search-panel {
+    padding: 16px;
+  }
+
+  .result-card h2 {
+    font-size: clamp(1.65rem, 9vw, 2.5rem);
+  }
+
+  .demand-row {
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .opportunity-bridge {
+    margin: 10px 0;
+    padding-top: 10px;
+  }
+
+  .opportunity-bridge h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .step-preview li {
+    grid-template-columns: 30px minmax(0, 1fr);
+  }
+
+  .step-preview p {
+    grid-column: 2;
   }
 
   .countdown-panel {
@@ -842,11 +917,19 @@ td {
 
   .flow-card {
     min-height: auto;
-    padding-bottom: 88px;
+    padding-bottom: 78px;
   }
 
   .flow-step {
-    min-height: 360px;
+    min-height: 250px;
+  }
+
+  .flow-step h3 {
+    font-size: clamp(1.85rem, 10vw, 2.8rem);
+  }
+
+  .flow-step p {
+    font-size: 1rem;
   }
 
   .metric-grid {
