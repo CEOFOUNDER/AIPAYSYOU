@@ -1,14 +1,23 @@
 # AI Pays You Website Guardrails
 
-Use these guardrails whenever updating the AI Pays You website.
+This GitHub file is the single source of truth for AI Pays You website guardrails.
+
+Primary command:
+
+```text
+$ai-pays-you-website-guardrails to update the website: [your change]
+```
+
+Do not maintain separate local project-folder copies of these guardrails. If a local operational prompt, note, or skill exists, it must point back to this GitHub file rather than becoming a competing rule set.
 
 ## Project Context
 
 - Site: AI Pays You
 - Repo: CEOFOUNDER/AIPAYSYOU
+- Canonical guardrails file: `GUARDRAILS.md` in `CEOFOUNDER/AIPAYSYOU`
 - Primary live site: https://aipaysyouin30days.com
 - GitHub Pages fallback: https://ceofounder.github.io/AIPAYSYOU/
-- Working folder: C:\Users\gille\Documents\Codex\2026-05-22\all-right-so-you-re-going
+- Working folder: `C:\Users\gille\Documents\Codex\2026-05-22\all-right-so-you-re-going`
 - Core files: `index.html`, `styles.css`, `compact.css`, `app.js`, `enhancements-20260524a.js`, `admin.html`
 - Custom domain file: `CNAME`
 
@@ -63,8 +72,8 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 
 ## Lessons From Past Mistakes
 
-- After a change, save it in both places when relevant: the local project folder and GitHub.
-- If adding project rules or context, update `GUARDRAILS.md` too.
+- GitHub is the source of truth for guardrails. Do not keep local project-folder guardrail copies.
+- If adding project rules or context, update this GitHub `GUARDRAILS.md` file.
 - Do not assume the local folder is a Git checkout; this project may need direct GitHub connector updates.
 - If GitHub Pages changes are made, verify the repository readback after publishing.
 - Avoid hidden legal footers. Company attribution must be visible, not gated behind funnel state.
@@ -76,21 +85,14 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 
 ## Before Making Any Website Change
 
-1. Check whether the change strengthens the domain checker funnel.
-2. Check whether it improves trust, clarity, or conversion.
-3. Check compact/mobile behavior.
-4. Check that the copy does not overpromise.
-5. Check that GitHub Pages static hosting still works.
-6. Check whether `GUARDRAILS.md` needs updating because of the change.
-7. If the change affects domain, footer, hosting, or legal identity, verify the live site and GitHub file readback.
-
-## Update Instruction Format
-
-Use this prompt pattern when asking for future website changes:
-
-```text
-$ai-pays-you-website-guardrails to update the website: [your change]
-```
+1. Fetch this GitHub guardrails file first.
+2. Check whether the change strengthens the domain checker funnel.
+3. Check whether it improves trust, clarity, or conversion.
+4. Check compact/mobile behavior.
+5. Check that the copy does not overpromise.
+6. Check that GitHub Pages static hosting still works.
+7. Check whether this file needs updating because of the change.
+8. If the change affects domain, footer, hosting, or legal identity, verify the live site and GitHub file readback.
 
 ## Example
 
@@ -106,5 +108,6 @@ When asked to update the website:
 - Keep styles consistent with existing files.
 - Avoid unrelated redesigns.
 - Verify the page still works locally where possible.
-- Verify GitHub readback for changed files when publishing directly to GitHub.
+- Publish required website changes to GitHub.
+- Verify GitHub readback for changed files after publishing.
 - Summarize what changed and what was intentionally left alone.
