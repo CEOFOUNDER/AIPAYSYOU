@@ -40,6 +40,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - The local MVP CRM/admin concept unless explicitly replacing it.
 - The custom domain `aipaysyouin30days.com` via `CNAME`.
 - The company attribution footer for SEE THE NEXT MOVE LTD.
+- The current footer/legal attribution wording unless the user explicitly asks to change footer copy.
 
 ## Tone And Copy
 
@@ -79,7 +80,8 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Do not assume the local folder is a Git checkout; this project may need direct GitHub connector updates.
 - If GitHub Pages changes are made, verify the repository readback after publishing.
 - Avoid hidden legal footers. Company attribution must be visible, not gated behind funnel state.
-- Prefer ASCII for legal footer symbols, such as `Copyright 2026`, to avoid encoding issues.
+- Footer/legal attribution copy is protected content. Do not change it as part of layout, CSS, cache-busting, or unrelated website edits.
+- Prefer entity-safe HTML for symbols in source, such as `&copy;`, when the visible page should show the copyright symbol.
 - Be careful when copying large CSS files to GitHub; verify selectors after update to catch typos.
 - For CSS/layout changes, bump query-string asset versions in `index.html` so the live site does not keep stale cached CSS.
 - For layout changes, check at least laptop, desktop, tablet, and mobile breakpoints before publishing when browser tooling is available.
