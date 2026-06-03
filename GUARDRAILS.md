@@ -40,7 +40,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - The local MVP CRM/admin concept unless explicitly replacing it.
 - The custom domain `aipaysyouin30days.com` via `CNAME`.
 - The company attribution footer for SEE THE NEXT MOVE LTD.
-- The current footer/legal attribution wording unless the user explicitly asks to change footer copy.
+- The current protected footer wording, unless the user explicitly asks to change footer copy: `© SEE THE NEXT MOVE LTD. 2026`.
 
 ## Tone And Copy
 
