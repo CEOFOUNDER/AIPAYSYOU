@@ -109,7 +109,7 @@
   width: min(1240px, calc(100% - 64px));
   margin: 0 auto 0;
   border-top: 1px solid var(--line);
-  padding: 26px 0 8px;
+  padding: 18px 0;
 }
 
 .about-project .eyebrow {
@@ -207,7 +207,7 @@
     display: grid;
     grid-template-columns: 220px minmax(0, 1fr);
     gap: 40px;
-    align-items: start;
+    align-items: center;
   }
 
   .about-project .eyebrow {
@@ -295,7 +295,8 @@
   }
 
   .about-project {
-    padding-top: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .site-footer {
@@ -334,7 +335,7 @@
 
   .about-project {
     width: min(100% - 32px, 720px);
-    padding-top: 24px;
+    padding: 18px 0;
   }
 
   .result-section,
@@ -383,7 +384,7 @@
 
   .about-project {
     width: min(100% - 24px, 1120px);
-    padding: 20px 0 4px;
+    padding: 16px 0;
   }
 
   .about-project p:last-child {
