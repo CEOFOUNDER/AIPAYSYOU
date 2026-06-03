@@ -41,7 +41,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - The custom domain `aipaysyouin30days.com` via `CNAME`.
 - The company attribution footer for SEE THE NEXT MOVE LTD.
 - The current protected footer wording, unless the user explicitly asks to change footer copy: `© SEE THE NEXT MOVE LTD. 2026`.
-- The `About this project` credibility band above the footer, unless explicitly asked to remove or replace it.
+- The `About this project` credibility band on the front page only, unless explicitly asked to remove or replace it.
 
 ## Tone And Copy
 
@@ -63,7 +63,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Keep the funnel easy to scan.
 - Maintain visual hierarchy: headline, promise, domain checker, steps, proof/fit, CTA.
 - Keep the legal/company footer visible, subtle, and readable.
-- Keep the `About this project` band subtle, text-led, and above the footer; do not make it a large promotional card or contact section.
+- Keep the `About this project` band subtle, text-led, and above the footer on `index.html` only; do not add it to `admin.html` or secondary pages.
 - On desktop, let the `About this project` text use the available footnote-band width rather than forcing it into a narrow paragraph block.
 - Keep `About this project` content vertically centered between its horizontal rules; avoid top-heavy padding that pushes the label/text downward.
 - Keep hero, timer, domain checker, and footer proportioned across laptop, desktop, tablet, and phone breakpoints.
