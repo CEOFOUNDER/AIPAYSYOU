@@ -112,8 +112,13 @@
   padding: 26px 0 8px;
 }
 
+.about-project .eyebrow {
+  margin-bottom: 10px;
+}
+
 .about-project p:last-child {
-  max-width: 860px;
+  width: 100%;
+  max-width: none;
   color: var(--muted);
   font-size: 0.98rem;
   line-height: 1.55;
@@ -198,6 +203,17 @@
     min-height: 48px;
   }
 
+  .about-project {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+
+  .about-project .eyebrow {
+    margin-bottom: 0;
+  }
+
   .site-footer {
     align-items: center;
     margin-top: 0;
@@ -237,6 +253,11 @@
   .search-panel {
     max-width: 420px;
     padding: 24px;
+  }
+
+  .about-project {
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 32px;
   }
 }
 
