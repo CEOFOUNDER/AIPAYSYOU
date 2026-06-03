@@ -60,6 +60,8 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Keep the funnel easy to scan.
 - Maintain visual hierarchy: headline, promise, domain checker, steps, proof/fit, CTA.
 - Keep the legal/company footer visible, subtle, and readable.
+- Keep hero, timer, domain checker, and footer proportioned across laptop, desktop, tablet, and phone breakpoints.
+- Do not let hero text overwhelm the domain checker on laptop screens; the first viewport should feel balanced, not like one oversized headline with a stranded form.
 
 ## Functional Consistency
 
@@ -79,6 +81,8 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Avoid hidden legal footers. Company attribution must be visible, not gated behind funnel state.
 - Prefer ASCII for legal footer symbols, such as `Copyright 2026`, to avoid encoding issues.
 - Be careful when copying large CSS files to GitHub; verify selectors after update to catch typos.
+- For CSS/layout changes, bump query-string asset versions in `index.html` so the live site does not keep stale cached CSS.
+- For layout changes, check at least laptop, desktop, tablet, and mobile breakpoints before publishing when browser tooling is available.
 - For domain setup, distinguish DNS propagation from wrong records. Check actual DNS records before changing things repeatedly.
 - For Namecheap and GitHub Pages, use GitHub Pages A records for `@` and a `www` CNAME to `CEOFOUNDER.github.io`.
 - HTTPS may take time after DNS works. Do not move to Cloudflare unless GitHub HTTPS remains blocked or the user explicitly asks.
@@ -92,7 +96,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 5. Check that the copy does not overpromise.
 6. Check that GitHub Pages static hosting still works.
 7. Check whether this file needs updating because of the change.
-8. If the change affects domain, footer, hosting, or legal identity, verify the live site and GitHub file readback.
+8. If the change affects domain, footer, hosting, legal identity, CSS, or responsive layout, verify the live site and GitHub file readback.
 
 ## Example
 
