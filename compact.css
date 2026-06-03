@@ -102,48 +102,53 @@
   .site-header,
   .site-footer,
   .search-hero {
-    width: min(1280px, calc(100% - 96px));
+    width: min(1200px, calc(100% - 64px));
   }
 
   .site-header {
-    min-height: 68px;
+    min-height: 64px;
+  }
+
+  .site-footer {
+    align-items: flex-start;
   }
 
   .search-hero {
     min-height: auto;
-    grid-template-columns: minmax(0, 1fr) minmax(360px, 480px);
-    gap: 48px;
+    grid-template-columns: minmax(0, 0.96fr) minmax(340px, 440px);
+    gap: 40px;
     align-items: center;
-    padding: 56px 0 72px;
+    padding: 36px 0 56px;
   }
 
   .hero-copy {
-    max-width: 700px;
+    max-width: 660px;
   }
 
   h1 {
-    max-width: 700px;
-    font-size: 4.8rem;
+    max-width: 660px;
+    font-size: 4.25rem;
     line-height: 1.02;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .hero-subtitle {
-    max-width: 660px;
-    font-size: 1.22rem;
+    max-width: 620px;
+    font-size: 1.14rem;
   }
 
   .search-panel {
     align-self: center;
     justify-self: end;
-    max-width: 480px;
-    padding: 24px;
+    max-width: 440px;
+    padding: 22px;
   }
 
   .floating-timer {
     position: absolute;
-    right: max(48px, calc((100vw - 1280px) / 2 + 48px));
-    top: 128px;
+    right: max(32px, calc((100vw - 1200px) / 2 + 32px));
+    top: 96px;
+    width: 160px;
   }
 }
 
@@ -151,40 +156,40 @@
   .site-header,
   .site-footer,
   .search-hero {
-    width: min(1180px, calc(100% - 64px));
+    width: min(1120px, calc(100% - 48px));
   }
 
   .search-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(340px, 440px);
-    gap: 40px;
-    padding-top: 44px;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 410px);
+    gap: 32px;
+    padding-top: 30px;
   }
 
   h1 {
-    max-width: 620px;
-    font-size: 4.05rem;
+    max-width: 590px;
+    font-size: 3.75rem;
   }
 
   .hero-subtitle {
-    max-width: 600px;
-    font-size: 1.12rem;
+    max-width: 560px;
+    font-size: 1.06rem;
   }
 
   .floating-timer {
-    right: 48px;
-    top: 108px;
+    right: 32px;
+    top: 88px;
   }
 }
 
 @media (min-width: 921px) and (max-height: 760px) {
   .search-hero {
-    padding-top: 28px;
-    padding-bottom: 44px;
+    padding-top: 20px;
+    padding-bottom: 36px;
   }
 
   h1 {
-    font-size: 3.65rem;
-    margin-bottom: 16px;
+    font-size: 3.35rem;
+    margin-bottom: 14px;
   }
 
   .kicker {
@@ -192,7 +197,11 @@
   }
 
   .hero-subtitle {
-    font-size: 1.06rem;
+    font-size: 1.02rem;
+  }
+
+  .search-panel {
+    padding: 18px;
   }
 }
 
