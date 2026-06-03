@@ -65,6 +65,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Keep the legal/company footer visible, subtle, and readable.
 - Keep the `About this project` band subtle, text-led, and above the footer; do not make it a large promotional card or contact section.
 - On desktop, let the `About this project` text use the available footnote-band width rather than forcing it into a narrow paragraph block.
+- Keep `About this project` content vertically centered between its horizontal rules; avoid top-heavy padding that pushes the label/text downward.
 - Keep hero, timer, domain checker, and footer proportioned across laptop, desktop, tablet, and phone breakpoints.
 - Do not let hero text overwhelm the domain checker on laptop screens; the first viewport should feel balanced, not like one oversized headline with a stranded form.
 - Use a clear spacing scale for landing page adjustments, favoring 8, 16, 24, 32, 48, and 64 pixel rhythm rather than arbitrary offsets.
