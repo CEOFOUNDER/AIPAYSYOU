@@ -63,6 +63,9 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Keep the legal/company footer visible, subtle, and readable.
 - Keep hero, timer, domain checker, and footer proportioned across laptop, desktop, tablet, and phone breakpoints.
 - Do not let hero text overwhelm the domain checker on laptop screens; the first viewport should feel balanced, not like one oversized headline with a stranded form.
+- Use a clear spacing scale for landing page adjustments, favoring 8, 16, 24, 32, 48, and 64 pixel rhythm rather than arbitrary offsets.
+- Use fluid type with bounded `clamp()` values so hero text remains dominant without crowding the form or footer.
+- Keep the 30-day timer visually connected to the domain checker, not floating over or colliding with the form.
 
 ## Functional Consistency
 
