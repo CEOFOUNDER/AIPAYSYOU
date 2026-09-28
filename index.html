@@ -9,7 +9,7 @@
       content="Search your domain of expertise and see how experts like you can get paid to review AI work."
     >
     <link rel="stylesheet" href="styles.css?v=20260603c">
-    <link rel="stylesheet" href="compact.css?v=20260928b">
+    <link rel="stylesheet" href="compact.css?v=20260928c">
   </head>
   <body>
     <header class="site-header">
@@ -22,7 +22,7 @@
           <p class="kicker">For people already expert in something valuable</p>
           <h1 id="headline">Get paid by AI for your domain expertise in 30 days.</h1>
           <p class="hero-subtitle">
-            Search your field and see whether your current expertise can be used to review AI work within the 30-day timer already running.
+            Choose your field to see indicative pay and platforms offering AI review work for experienced professionals.
           </p>
         </div>
 
@@ -59,85 +59,66 @@
                 <option value="software">Software Engineering</option>
               </select>
             </label>
-            <p class="search-note">Use the expertise you already have. No career switch.</p>
-            <button class="button search-button" type="button" id="check-demand" disabled>Check my domain</button>
+            <p class="search-note">Takes 10 seconds. No email required.</p>
+            <button class="button search-button" type="button" id="check-demand" disabled>Show my opportunities</button>
           </div>
         </div>
       </section>
 
       <section class="result-section locked-section" id="result-section" aria-labelledby="fit-headline" hidden>
         <div class="result-card" aria-live="polite">
-          <p class="eyebrow">Good news</p>
+          <p class="eyebrow">Your match</p>
           <h2 id="fit-headline">Your expertise is in demand.</h2>
           <p id="fit-description">
             Select your domain expertise to see how it maps to AI review work.
           </p>
+
           <div class="demand-row">
             <div>
-              <span>Domain</span>
+              <span>Your domain</span>
               <strong id="fit-domain">Not selected</strong>
             </div>
             <div>
-              <span>Estimated AI expert review range</span>
+              <span>Indicative expert review rate</span>
               <strong id="fit-pay">Select a domain</strong>
             </div>
           </div>
+
+          <ol class="conversion-path" aria-label="How the process works">
+            <li>
+              <span>1</span>
+              <div>
+                <strong>Choose a platform</strong>
+                <p>Open matching positions below.</p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <strong>Create your profile and apply</strong>
+                <p>Present the expertise relevant to the position.</p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <strong>Complete accepted work</strong>
+                <p>Deliver strong work and receive payment under the platform's terms.</p>
+              </div>
+            </li>
+          </ol>
+
           <div class="opportunity-sources" aria-labelledby="opportunity-sources-title">
-            <p class="eyebrow">Step 1 of 3</p>
             <div class="opportunity-summary">
-              <h3 id="opportunity-sources-title">Choose a platform and view matching positions</h3>
-              <p>Open one or more platforms below. Each button shows its own indicative number of positions for you to explore.</p>
+              <p class="eyebrow">Start with step 1</p>
+              <h3 id="opportunity-sources-title">Choose a platform</h3>
+              <p>Open one or more platforms to view positions matching your expertise.</p>
             </div>
             <div class="opportunity-links" id="opportunity-links" aria-label="Step 1: choose a referral platform"></div>
             <p class="opportunity-note">
-              Position counts are indicative estimates refreshed when you check a domain. Availability and eligibility are confirmed on each platform.
+              Counts are indicative estimates. Availability and eligibility are confirmed on each platform.
             </p>
           </div>
-          <button class="button workflow-next" type="button" id="unlock-flow">Continue to step 2</button>
-        </div>
-      </section>
-
-      <section class="action-flow locked-section" id="action-flow" aria-labelledby="flow-title" hidden>
-        <div class="section-heading">
-          <p class="eyebrow">Continue the 3-step path</p>
-          <h2 id="flow-title">After choosing a platform, turn your <span id="domain-inline">selected domain</span> expertise into a strong application.</h2>
-        </div>
-
-        <div class="flow-card">
-          <div class="step-tabs" role="tablist" aria-label="Application steps 2 and 3">
-            <button class="step-tab active" type="button" data-step-target="2" role="tab" aria-selected="true">
-              <span>Step 2</span>
-              Set up and apply
-            </button>
-            <button class="step-tab" type="button" data-step-target="3" role="tab" aria-selected="false" disabled>
-              <span>Step 3</span>
-              Do your best work
-            </button>
-          </div>
-
-          <article class="flow-step active" data-flow-step="2" aria-labelledby="step-2-title">
-            <p class="eyebrow">Step 2 of 3</p>
-            <h3 id="step-2-title">Set yourself up and apply</h3>
-            <p>
-              On the platform you opened in Step 1, complete your profile, present your relevant expertise clearly, and apply for positions that match your experience.
-            </p>
-            <div class="flow-actions">
-              <button class="button ghost" type="button" data-return-opportunities>Back to step 1 platforms</button>
-              <button class="button" type="button" data-step-next="3">Continue to step 3</button>
-            </div>
-          </article>
-
-          <article class="flow-step" data-flow-step="3" aria-labelledby="step-3-title" hidden>
-            <p class="eyebrow">Step 3 of 3</p>
-            <h3 id="step-3-title">Do your best work and receive payment</h3>
-            <p>
-              Complete accepted expert review work carefully, deliver strong judgment, and receive payment when your work is accepted under the platform's terms.
-            </p>
-            <div class="flow-actions">
-              <button class="button ghost" type="button" data-step-next="2">Back to step 2</button>
-              <button class="button begin-button" type="button" data-return-opportunities>Review step 1 platforms</button>
-            </div>
-          </article>
         </div>
       </section>
 
