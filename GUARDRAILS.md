@@ -81,7 +81,10 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Preserve external links and target behavior unless asked to change them.
 - Approved referral URLs are Mercor `https://bit.ly/4wtCwqF`, Micro1 `https://bit.ly/4xKo3pA`, Alignerr `https://bit.ly/4xWWEAR`, and Ethos `https://bit.ly/4iNHeLo`.
 - Show all four approved platforms for every expertise option.
-- Position counts may display a randomized round number from 1 to 20 as `Up to X positions`, but must be labelled as indicative rather than live or guaranteed inventory.
+- Treat the four referral platform buttons as Step 1 of the user workflow: choose a platform and view positions.
+- Give each platform button its own independently randomized count from 1 to 20, displayed on that button as `Up to X positions`.
+- Label all position counts as indicative estimates rather than live or guaranteed inventory; availability and eligibility are confirmed on each platform.
+- Keep the workflow sequence explicit and non-duplicative: Step 1 is the platform choice, Step 2 is profile/application setup, and Step 3 is completing accepted work and receiving payment under the platform's terms.
 - Preserve `CNAME` with `aipaysyouin30days.com` unless the custom domain is intentionally changed.
 
 ## Lessons From Past Mistakes
@@ -97,6 +100,8 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - For CSS/layout changes, bump query-string asset versions in `index.html` so the live site does not keep stale cached CSS.
 - For layout changes, check at least laptop, desktop, tablet, and mobile breakpoints before publishing when browser tooling is available.
 - Do not leave obsolete single-platform referral CTAs in the funnel when the approved multi-platform opportunity panel is present.
+- Do not show one aggregate position count for multiple referral platforms; each platform button must carry its own indicative count.
+- Do not duplicate Step 1 in a second screen after the visitor has already been shown the referral platform choices.
 - For domain setup, distinguish DNS propagation from wrong records. Check actual DNS records before changing things repeatedly.
 - For Namecheap and GitHub Pages, use GitHub Pages A records for `@` and a `www` CNAME to `CEOFOUNDER.github.io`.
 - HTTPS may take time after DNS works. Do not move to Cloudflare unless GitHub HTTPS remains blocked or the user explicitly asks.
