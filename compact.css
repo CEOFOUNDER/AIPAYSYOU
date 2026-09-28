@@ -51,22 +51,21 @@
 }
 
 .opportunity-summary {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 12px;
+  display: grid;
+  gap: 6px;
 }
 
-.opportunity-summary span {
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 750;
-}
-
-.opportunity-summary strong {
-  color: var(--accent);
-  font-size: 1.05rem;
+.opportunity-summary h3 {
+  font-size: clamp(1.12rem, 2vw, 1.5rem);
   line-height: 1.2;
+  margin: 0;
+}
+
+.opportunity-summary p {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .opportunity-links {
@@ -77,10 +76,33 @@
 }
 
 .opportunity-link {
+  align-items: flex-start;
+  flex-direction: column;
   min-width: 0;
-  min-height: 38px;
-  padding: 8px 10px;
-  font-size: 0.82rem;
+  min-height: 64px;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.opportunity-platform {
+  color: var(--ink);
+  font-size: 0.84rem;
+  line-height: 1.2;
+}
+
+.opportunity-position-count {
+  color: var(--accent);
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.workflow-next {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.action-flow .step-tabs {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .opportunity-note {
@@ -440,12 +462,6 @@
   .about-project p:last-child {
     font-size: 0.92rem;
     line-height: 1.48;
-  }
-
-  .opportunity-summary {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 4px;
   }
 
   .opportunity-links {
