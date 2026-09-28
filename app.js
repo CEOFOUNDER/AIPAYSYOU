@@ -181,23 +181,32 @@ function syncDomainSelect() {
 }
 
 function renderReferralOpportunities() {
-  const count = Math.floor(Math.random() * 20) + 1;
-  const countElement = document.getElementById("opportunity-count");
   const linksElement = document.getElementById("opportunity-links");
-
-  if (countElement) countElement.textContent = `Up to ${count} positions`;
   if (!linksElement) return;
 
   linksElement.replaceChildren();
 
   for (const opportunity of REFERRAL_OPPORTUNITIES) {
+    const count = Math.floor(Math.random() * 20) + 1;
     const link = document.createElement("a");
+    const platform = document.createElement("span");
+    const positionCount = document.createElement("strong");
+
     link.className = "button ghost opportunity-link";
     link.href = opportunity.url;
     link.target = "_blank";
     link.rel = "noopener sponsored";
-    link.textContent = opportunity.name;
-    link.setAttribute("aria-label", `View ${opportunity.name} opportunities`);
+    link.setAttribute(
+      "aria-label",
+      `Step 1: view up to ${count} positions on ${opportunity.name}`,
+    );
+
+    platform.className = "opportunity-platform";
+    platform.textContent = opportunity.name;
+    positionCount.className = "opportunity-position-count";
+    positionCount.textContent = `Up to ${count} positions`;
+
+    link.append(platform, positionCount);
     linksElement.appendChild(link);
   }
 }
@@ -273,7 +282,7 @@ function setupStepFlow() {
   const tabs = Array.from(document.querySelectorAll("[data-step-target]"));
   const controls = Array.from(document.querySelectorAll("[data-step-next]"));
   if (!panels.length) return;
-  let maxUnlockedStep = 1;
+  let maxUnlockedStep = 2;
 
   function showStep(step) {
     const stepNumber = Number(step);
@@ -304,7 +313,7 @@ function setupStepFlow() {
     });
   }
 
-  showStep("1");
+  showStep("2");
 }
 
 function handleLeadForm() {
