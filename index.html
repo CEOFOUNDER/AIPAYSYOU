@@ -9,7 +9,7 @@
       content="Search your domain of expertise and see how experts like you can get paid to review AI work."
     >
     <link rel="stylesheet" href="styles.css?v=20260603c">
-    <link rel="stylesheet" href="compact.css?v=20260603f">
+    <link rel="stylesheet" href="compact.css?v=20260928a">
   </head>
   <body>
     <header class="site-header">
@@ -82,6 +82,16 @@
               <strong id="fit-pay">Select a domain</strong>
             </div>
           </div>
+          <div class="opportunity-sources" aria-labelledby="opportunity-sources-title">
+            <div class="opportunity-summary">
+              <span id="opportunity-sources-title">Opportunities found across referral platforms</span>
+              <strong id="opportunity-count">Check your domain</strong>
+            </div>
+            <div class="opportunity-links" id="opportunity-links" aria-label="Referral opportunity platforms"></div>
+            <p class="opportunity-note">
+              Indicative count refreshed when you check a domain. Availability and eligibility are confirmed on each platform.
+            </p>
+          </div>
           <div class="opportunity-bridge">
             <h3>Secure this opportunity in 3 easy steps</h3>
             <ol class="step-preview" aria-label="3 easy steps">
@@ -135,7 +145,7 @@
               Signal that, as an expert in your selected domain, you are ready to review AI work.
             </p>
             <div class="flow-actions">
-              <a class="button begin-button" href="https://t.mercor.com/iG6tP" target="_blank" rel="noopener">Begin step 1</a>
+              <button class="button begin-button" type="button" data-return-opportunities>View matched opportunities</button>
               <button class="button ghost" type="button" data-step-next="2">Then show step 2</button>
             </div>
           </article>
@@ -160,7 +170,7 @@
             </p>
             <div class="flow-actions">
               <button class="button ghost" type="button" data-step-next="2">Back to step 2</button>
-              <a class="button begin-button" href="https://t.mercor.com/iG6tP" target="_blank" rel="noopener">Begin step 1</a>
+              <button class="button begin-button" type="button" data-return-opportunities>View matched opportunities</button>
             </div>
           </article>
         </div>
@@ -178,7 +188,7 @@
       <span>&copy; SEE THE NEXT MOVE LTD. 2026</span>
     </footer>
 
-    <script src="app.js?v=20260603c"></script>
+    <script src="app.js?v=20260928a"></script>
     <script src="enhancements-20260524a.js"></script>
   </body>
 </html>
