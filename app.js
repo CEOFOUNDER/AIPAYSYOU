@@ -15,10 +15,10 @@ const FUNNEL_STEPS = {
 };
 
 const REFERRAL_OPPORTUNITIES = [
-  { name: "Mercor", url: "https://bit.ly/4wtCwqF" },
-  { name: "Micro1", url: "https://bit.ly/4xKo3pA" },
-  { name: "Alignerr", url: "https://bit.ly/4xWWEAR" },
-  { name: "Ethos", url: "https://bit.ly/4iNHeLo" },
+  { name: "Mercor", url: "https://work.mercor.com/?referralCode=00a43f19-4489-444c-8926-cd5f4309c1cf&utm_campaign=platform&utm_medium=direct&utm_source=referral" },
+  { name: "Micro1", url: "https://www.micro1.ai/experts/opportunities?referralCode=638abe12-b20b-42ec-a23b-61a826c98c6a&utm_source=referral&utm_medium=share&utm_campaign=job_referral" },
+  { name: "Alignerr", url: "https://app.alignerr.com/signin?referral-code=55253c98-ebad-4450-8791-5c2c989760ea&program=b7f918c0-4ef7-11f1-9dec-3d76718b1a77&referralJobId=f4b9a0e2-e6c2-4388-b01d-b7655b313d9b" },
+  { name: "Ethos", url: "https://agent.askethos.com/refer/lwdne1mcsmzt" },
 ];
 
 const EXPERTISE_PROFILES = {
