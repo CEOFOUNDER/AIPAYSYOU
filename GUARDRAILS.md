@@ -34,7 +34,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - The domain checker funnel as the central interactive journey.
 - The 30-day positioning.
 - The professional/domain expert audience.
-- The Mercor/project marketplace affiliate path where already configured.
+- The approved referral opportunity paths for Mercor, Micro1, Alignerr, and Ethos.
 - The compact/mobile screen experience.
 - The lightweight GitHub Pages/static-site architecture.
 - The local MVP CRM/admin concept unless explicitly replacing it.
@@ -79,6 +79,9 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Do not introduce backend assumptions incompatible with GitHub Pages.
 - Keep `admin.html` as local/browser-side CRM unless explicitly changing the storage model.
 - Preserve external links and target behavior unless asked to change them.
+- Approved referral URLs are Mercor `https://bit.ly/4wtCwqF`, Micro1 `https://bit.ly/4xKo3pA`, Alignerr `https://bit.ly/4xWWEAR`, and Ethos `https://bit.ly/4iNHeLo`.
+- Show all four approved platforms for every expertise option.
+- Position counts may display a randomized round number from 1 to 20 as `Up to X positions`, but must be labelled as indicative rather than live or guaranteed inventory.
 - Preserve `CNAME` with `aipaysyouin30days.com` unless the custom domain is intentionally changed.
 
 ## Lessons From Past Mistakes
@@ -93,6 +96,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Be careful when copying large CSS files to GitHub; verify selectors after update to catch typos.
 - For CSS/layout changes, bump query-string asset versions in `index.html` so the live site does not keep stale cached CSS.
 - For layout changes, check at least laptop, desktop, tablet, and mobile breakpoints before publishing when browser tooling is available.
+- Do not leave obsolete single-platform referral CTAs in the funnel when the approved multi-platform opportunity panel is present.
 - For domain setup, distinguish DNS propagation from wrong records. Check actual DNS records before changing things repeatedly.
 - For Namecheap and GitHub Pages, use GitHub Pages A records for `@` and a `www` CNAME to `CEOFOUNDER.github.io`.
 - HTTPS may take time after DNS works. Do not move to Cloudflare unless GitHub HTTPS remains blocked or the user explicitly asks.
