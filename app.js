@@ -14,6 +14,13 @@ const FUNNEL_STEPS = {
   7: "Got paid",
 };
 
+const REFERRAL_OPPORTUNITIES = [
+  { name: "Mercor", url: "https://bit.ly/4wtCwqF" },
+  { name: "Micro1", url: "https://bit.ly/4xKo3pA" },
+  { name: "Alignerr", url: "https://bit.ly/4xWWEAR" },
+  { name: "Ethos", url: "https://bit.ly/4iNHeLo" },
+];
+
 const EXPERTISE_PROFILES = {
   consulting: {
     label: "Consulting - Business, Strategy, IT, and Transformation",
@@ -173,6 +180,28 @@ function syncDomainSelect() {
   });
 }
 
+function renderReferralOpportunities() {
+  const count = Math.floor(Math.random() * 20) + 1;
+  const countElement = document.getElementById("opportunity-count");
+  const linksElement = document.getElementById("opportunity-links");
+
+  if (countElement) countElement.textContent = `Up to ${count} positions`;
+  if (!linksElement) return;
+
+  linksElement.replaceChildren();
+
+  for (const opportunity of REFERRAL_OPPORTUNITIES) {
+    const link = document.createElement("a");
+    link.className = "button ghost opportunity-link";
+    link.href = opportunity.url;
+    link.target = "_blank";
+    link.rel = "noopener sponsored";
+    link.textContent = opportunity.name;
+    link.setAttribute("aria-label", `View ${opportunity.name} opportunities`);
+    linksElement.appendChild(link);
+  }
+}
+
 function updateFitPanel(value) {
   const profile = EXPERTISE_PROFILES[value] || EXPERTISE_PROFILES.consulting;
   const headline = document.getElementById("fit-headline");
@@ -189,6 +218,7 @@ function updateFitPanel(value) {
   if (domain) domain.textContent = exactDomain;
   if (inline) inline.textContent = exactDomain;
   if (stepOne) stepOne.textContent = `Signal that, as an expert in ${exactDomain}, you are ready to review AI work.`;
+  renderReferralOpportunities();
 }
 
 function updateDemandButton() {
@@ -230,6 +260,12 @@ function revealFlow() {
 function setupUnlocks() {
   document.getElementById("check-demand")?.addEventListener("click", () => revealResult());
   document.getElementById("unlock-flow")?.addEventListener("click", revealFlow);
+
+  for (const control of document.querySelectorAll("[data-return-opportunities]")) {
+    control.addEventListener("click", () => {
+      document.getElementById("result-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  }
 }
 
 function setupStepFlow() {
