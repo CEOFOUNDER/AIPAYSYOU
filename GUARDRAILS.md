@@ -61,6 +61,9 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - CTAs should be obvious and action-oriented.
 - Avoid clutter, oversized decorative sections, and unnecessary complexity.
 - Keep the funnel easy to scan.
+- Keep one primary decision per stage: choose expertise first, then choose a referral platform.
+- Treat referral-platform clicks as the landing page's primary conversion action; supporting process guidance must not compete with those links.
+- Explain Steps 2 and 3 compactly on the result view instead of placing them behind an additional interactive screen.
 - Maintain visual hierarchy: headline, promise, domain checker, steps, proof/fit, CTA.
 - Keep the legal/company footer visible, subtle, and readable.
 - Keep the `About this project` band subtle, text-led, and above the footer on `index.html` only; do not add it to `admin.html` or secondary pages.
@@ -102,6 +105,8 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Do not leave obsolete single-platform referral CTAs in the funnel when the approved multi-platform opportunity panel is present.
 - Do not show one aggregate position count for multiple referral platforms; each platform button must carry its own indicative count.
 - Do not duplicate Step 1 in a second screen after the visitor has already been shown the referral platform choices.
+- Do not add a generic `Continue` CTA after the referral-platform choices when it distracts from opening a matched platform.
+- Keep conversion copy short: state the action, reduce uncertainty, and avoid repeating the same instruction in multiple sections.
 - For domain setup, distinguish DNS propagation from wrong records. Check actual DNS records before changing things repeatedly.
 - For Namecheap and GitHub Pages, use GitHub Pages A records for `@` and a `www` CNAME to `CEOFOUNDER.github.io`.
 - HTTPS may take time after DNS works. Do not move to Cloudflare unless GitHub HTTPS remains blocked or the user explicitly asks.
