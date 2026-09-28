@@ -186,8 +186,14 @@ function renderReferralOpportunities() {
 
   linksElement.replaceChildren();
 
-  for (const opportunity of REFERRAL_OPPORTUNITIES) {
-    const count = Math.floor(Math.random() * 20) + 1;
+  const counts = new Set();
+  while (counts.size < REFERRAL_OPPORTUNITIES.length) {
+    counts.add(Math.floor(Math.random() * 20) + 1);
+  }
+
+  for (const [index, opportunity] of REFERRAL_OPPORTUNITIES.entries()) {
+    const count = Array.from(counts)[index];
+    const positionLabel = count === 1 ? "position" : "positions";
     const link = document.createElement("a");
     const platform = document.createElement("span");
     const positionCount = document.createElement("strong");
@@ -198,13 +204,13 @@ function renderReferralOpportunities() {
     link.rel = "noopener sponsored";
     link.setAttribute(
       "aria-label",
-      `Step 1: view up to ${count} positions on ${opportunity.name}`,
+      `Step 1: view up to ${count} ${positionLabel} on ${opportunity.name}`,
     );
 
     platform.className = "opportunity-platform";
     platform.textContent = opportunity.name;
     positionCount.className = "opportunity-position-count";
-    positionCount.textContent = `Up to ${count} positions`;
+    positionCount.textContent = `Up to ${count} ${positionLabel}`;
 
     link.append(platform, positionCount);
     linksElement.appendChild(link);
