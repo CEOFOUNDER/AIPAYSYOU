@@ -82,7 +82,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Approved referral URLs are Mercor `https://bit.ly/4wtCwqF`, Micro1 `https://bit.ly/4xKo3pA`, Alignerr `https://bit.ly/4xWWEAR`, and Ethos `https://bit.ly/4iNHeLo`.
 - Show all four approved platforms for every expertise option.
 - Treat the four referral platform buttons as Step 1 of the user workflow: choose a platform and view positions.
-- Give each platform button its own independently randomized count from 1 to 20, displayed on that button as `Up to X positions`.
+- Give each platform button its own randomized count from 1 to 20, displayed on that button as `Up to X positions`; all four counts must be different within the same result view, and 1 must use the singular `position`.
 - Label all position counts as indicative estimates rather than live or guaranteed inventory; availability and eligibility are confirmed on each platform.
 - Keep the workflow sequence explicit and non-duplicative: Step 1 is the platform choice, Step 2 is profile/application setup, and Step 3 is completing accepted work and receiving payment under the platform's terms.
 - Preserve `CNAME` with `aipaysyouin30days.com` unless the custom domain is intentionally changed.
