@@ -82,7 +82,8 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - Do not introduce backend assumptions incompatible with GitHub Pages.
 - Keep `admin.html` as local/browser-side CRM unless explicitly changing the storage model.
 - Preserve external links and target behavior unless asked to change them.
-- Approved referral URLs are Mercor `https://bit.ly/4wtCwqF`, Micro1 `https://bit.ly/4xKo3pA`, Alignerr `https://bit.ly/4xWWEAR`, and Ethos `https://bit.ly/4iNHeLo`.
+- Approved direct referral URLs are Mercor `https://work.mercor.com/?referralCode=00a43f19-4489-444c-8926-cd5f4309c1cf&utm_campaign=platform&utm_medium=direct&utm_source=referral`, Micro1 `https://www.micro1.ai/experts/opportunities?referralCode=638abe12-b20b-42ec-a23b-61a826c98c6a&utm_source=referral&utm_medium=share&utm_campaign=job_referral`, Alignerr `https://app.alignerr.com/signin?referral-code=55253c98-ebad-4450-8791-5c2c989760ea&program=b7f918c0-4ef7-11f1-9dec-3d76718b1a77&referralJobId=f4b9a0e2-e6c2-4388-b01d-b7655b313d9b`, and Ethos `https://agent.askethos.com/refer/lwdne1mcsmzt`.
+- Link referral buttons directly to their approved destination URLs; do not insert Bitly or another URL shortener between AI Pays You and the destination.
 - Show all four approved platforms for every expertise option.
 - Treat the four referral platform buttons as Step 1 of the user workflow: choose a platform and view positions.
 - Give each platform button its own randomized count from 1 to 20, displayed on that button as `Up to X positions`; all four counts must be different within the same result view, and 1 must use the singular `position`.
@@ -103,6 +104,7 @@ AI Pays You helps people turn their professional knowledge into paid AI-related 
 - For CSS/layout changes, bump query-string asset versions in `index.html` so the live site does not keep stale cached CSS.
 - For layout changes, check at least laptop, desktop, tablet, and mobile breakpoints before publishing when browser tooling is available.
 - Do not leave obsolete single-platform referral CTAs in the funnel when the approved multi-platform opportunity panel is present.
+- Resolve and verify referral destinations before publishing direct links. If a legacy redirect points to a retired route, use the verified current official route while preserving its referral code.
 - Do not show one aggregate position count for multiple referral platforms; each platform button must carry its own indicative count.
 - Do not duplicate Step 1 in a second screen after the visitor has already been shown the referral platform choices.
 - Do not add a generic `Continue` CTA after the referral-platform choices when it distracts from opening a matched platform.
